@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import logo from "../images/logo.jpg";
+import logo from "../images/pLogo.png";
+import { Link } from "react-router-dom";
 // import PropTypes from 'prop-types'
 
 function Navbar(props) {
@@ -16,11 +17,11 @@ function Navbar(props) {
   }
 
   return (
-    <div className="sticky top-0 z-50 h-16 w-full filter backdrop-blur-lg">
-      <header className="sticky z-50 top-0 w-full h-full bg-[#1f203b] text-white flex px-3 justify-between md:justify-center items-center opacity-80 ">
+    <div className="sticky top-0 z-[100] h-20 w-full backdrop-filter backdrop-blur-md">
+      <header className="w-full h-full bg-[#1f203b] text-white flex px-3 justify-between md:justify-center items-center opacity-90 md:opacity-80 py-5">
         {/* <!-- left elements div --> */}
-        <div className="md:absolute left-2 left-div logo">
-          <img className="h-10" src={logo} alt="" />
+        <div className="pl-2 md:absolute md:left-6 left-div logo hover:scale-105 transition duration-300">
+          <Link to="/"><img className="h-14" src={logo} alt="" /></Link>
         </div>
 
         {/* <!-- right elements div --> */}
@@ -42,31 +43,32 @@ function Navbar(props) {
             </svg>
           </button>
           {/* :className="{'translate-x-full': !navOpen, 'translate-x-0': navOpen}" */}
+          {/* <div className="backdrop-blur-xl"> */}
           <ul
-            className={`fixed left-0 right-0 min-h-screen bg-[#25274D] space-y-2 p-5 mt-3 font-gilroy text-lg z-50 transform translate-x-full ${navOpen === "false" ? "translate-x-full" : "translate-x-0"
-              } duration-300 md:relative md:flex md:min-h-0 md:space-y-0 md:p-0 md:bg-opacity-0 md:opacity-100 md:mt-0 md:space-x-4 md:translate-x-0 md:mr-2`}
+            className={`fixed left-0 right-0 min-h-screen bg-[#1f203b] space-y-2 p-5 mt-3 font-gilroy text-lg z-50 transform translate-x-full ${navOpen === "false" ? "translate-x-full" : "translate-x-0"} duration-300 md:relative md:flex md:min-h-0 md:space-y-0 md:p-0 md:bg-opacity-0 md:opacity-100 md:mt-0 md:space-x-4 md:translate-x-0 md:mr-2`}
           >
-            <a href="/">
+            <Link to="/" onClick={toggleNavBar}>
               <li className="hover:bg-[#29648a] rounded-2xl px-3 py-1 my-1 text-center focus:outline-none focus:bg-[#29648a]">
                 Home
               </li>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/about" onClick={toggleNavBar}>
               <li className="hover:bg-[#29648a] rounded-2xl px-3 py-1 my-1 text-center focus:outline-none focus:bg-[#29648a]">
-                About
+                About Me
               </li>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/experiences" onClick={toggleNavBar}>
               <li className="hover:bg-[#29648a] rounded-2xl px-3 py-1 my-1 text-center focus:outline-none focus:bg-[#29648a]">
-                Resume
+                Experiences
               </li>
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/contact" onClick={toggleNavBar}>
               <li className="border-2 border-[#29648a] rounded-2xl px-3 py-1 my-1 text-center focus:outline-none hover:bg-teal-600 duration-300">
                 Contact Me
               </li>
-            </a>
+            </Link>
           </ul>
+          {/* </div> */}
         </nav>
       </header>
     </div>
