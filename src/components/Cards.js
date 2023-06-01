@@ -3,7 +3,7 @@ import { FaGithub, FaGlobe } from "react-icons/fa";
 
 function Cards(props) {
   return (
-    <div className="cards max-w-[25rem] m-3 min-h-[25rem] h-full rounded-lg flex flex-col hover:scale-105 transform duration-200 shadow-xl md:m-0 md:mx-3 md:my-3 md:w-[28rem]">
+    <div className="cards max-w-[25rem] m-3 min-h-[25rem] h-full rounded-lg flex flex-col hover:scale-105 transform duration-200 shadow-xl lg:m-0 lg:mx-3 lg:my-3 lg:w-[28rem]">
       <div className="img focus:outline-none">
         <img
           src={
@@ -24,10 +24,10 @@ function Cards(props) {
         {/* <a rel="noreferrer" href="/" className="m-3"> */}
         <div className="h-[2px] bg-gray-300 mx-5 rounded-full"></div>
         <div className="text-white rounded-lg p-2 md:p-4 min-w-full flex justify-center items-center space-x-2 md:space-x-9">
-          <a href={props.github} className="text-slate-800 text-4xl">
+          <a rel="noreferrer" target="_blank" href={props.github} className="text-slate-800 text-4xl">
               <FaGithub />
           </a>
-          <a href={props.hostURL} className="text-slate-800 text-4xl">
+          <a rel="noreferrer" target="_blank" href={props.host} className="text-slate-800 text-4xl">
               <FaGlobe />
           </a>
         </div>

@@ -13,7 +13,7 @@ export const Settings = {
     autoplaySpeed: 2000,
   responsive: [ 
     {
-      breakpoint: 1024,
+      breakpoint: 2000,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
@@ -22,11 +22,11 @@ export const Settings = {
       },
     },
     {
-      breakpoint: 640,
+      breakpoint: 1425,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        initialSlide: 2,
+        // initialSlide: 2,
       },
     },
     {

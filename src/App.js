@@ -10,9 +10,16 @@ import Contactme from "./components/Contactme";
 import { useState, useEffect } from "react";
 import HashLoader from "react-spinners/HashLoader";
 import ScrollToTop from "./components/ScrollToTop";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { particlesOptions } from "./components/particlesConfig";
 
 function App(props) {
   const [loading, setLoading] = useState(false);
+
+  const particlesInit = (engine) => {
+    loadFull(engine);
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -35,6 +42,7 @@ function App(props) {
         </div>
       ) : (
         <BrowserRouter>
+        <Particles init={particlesInit} options={particlesOptions} />
         <ScrollToTop />
           <Navbar />
           <Routes>

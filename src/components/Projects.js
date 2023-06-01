@@ -35,6 +35,15 @@ const Projects = [
         github: "/",
         hostURL: "https://simplewa.netlify.app/"
     },
+    {
+        id: "p5",
+        title: "Technopedia",
+        description: "Developed a website for a hackathon in PCCOE College. This website gives a introduction of the technical world, courses and roadmaps for different technologies.",
+        tech: ["Tailwind-CSS", "ReactJS"],
+        img: "https://pcprd.azureedge.net/content/c541aa03f724.jpg",
+        github: "/",
+        hostURL: "https://technopedia-piyush-bora.netlify.app/"
+    },
 ]
 
 export default Projects;

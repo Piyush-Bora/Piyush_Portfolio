@@ -9,6 +9,7 @@ import Slider from "react-slick";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Settings } from "./Settings";
 import { Fade } from "react-awesome-reveal";
+import './home.css'
 
 function Home() {
   const socialMediaLinks = [
@@ -158,13 +159,13 @@ function Home() {
 
       {/* Tools */}
       <div className="min-w-full flex justify-center items-center py-8">
-        <Fade delay={500} duration={1000}>
+        <Fade delay={200} duration={1000}>
           <span className="text-center text-[#0891B2] text-3xl mt-4">
             Tools
           </span>
         </Fade>
       </div>
-      <Fade delay={500} duration={1000}>
+      <Fade delay={200} duration={1000}>
         <div className="box-border min-w-full flex flex-wrap justify-center items-center px-1 md:px-30">
           {Skills?.filter((item) => item.category === "Tools").map((item) => (
             <div className="w-[8rem] md:w-[9rem] wrapper flex flex-col bg-white rounded-xl md:mx-4 mx-2 my-2 p-3 justify-center items-center hover:scale-105 duration-150">
