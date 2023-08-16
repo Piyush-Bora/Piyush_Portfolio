@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
@@ -123,7 +123,7 @@ export default function Contact() {
     <Loader></Loader>
   ) : (
     <div className=" overflow-hidden bg-gray-800 rounded-lg shadow-md items-center w-auto xl:w-5/6 mx-auto py-6 my-8">
-      <Fade up cascade>
+      <Fa de up cascade>
         <div className="w-5/6 mx-auto">
           <div>
             <h1 className="heading-main">Let's Talk</h1>
@@ -290,7 +290,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-      </Fade>
+      </Fa>
     </div>
   );
 }

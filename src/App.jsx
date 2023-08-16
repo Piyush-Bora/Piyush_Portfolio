@@ -22,10 +22,10 @@ function App(props) {
   };
 
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
+    setLoading(false);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 1000);
   }, []);
 
   return (
@@ -42,8 +42,8 @@ function App(props) {
         </div>
       ) : (
         <BrowserRouter>
-        <Particles init={particlesInit} options={particlesOptions} />
-        <ScrollToTop />
+          <Particles init={particlesInit} options={particlesOptions} />
+          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route exact path="/" element={<Home />} />
