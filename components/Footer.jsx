@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/pLogo.png";
+// import logo from "../images/pLogo.png";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
 // import {Fade} from "react-awesome-reveal";
@@ -37,7 +37,13 @@ const Footer = () => {
             href="/"
             className="flex title-font font-medium items-center md:justify-start justify-center text-gray-200"
           >
-            <Image src={logo} alt="" className="h-8 w-8 object-contain" />
+            <Image
+              src="/images/pLogo.png"
+              alt=""
+              className="h-8 w-8 object-contain"
+              width={500}
+              height={500}
+            />
             {/* <span className="mx-3 text-3xl">|</span> */}
             <span className="ml-4 text-xl border-l-2 px-4 border-gray-300">
               Made by Piyush Bora

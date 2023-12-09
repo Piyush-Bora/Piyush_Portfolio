@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Fade } from "react-awesome-reveal";
 import { toast, ToastContainer } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import "react-toastify/dist/ReactToastify.css";
 import HashLoader from "react-spinners/HashLoader";
 
@@ -15,7 +15,7 @@ export default function Contactme() {
   const emailRegex = RegExp(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   );
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [data, setData] = useState({
     user_name: "",
@@ -58,7 +58,7 @@ export default function Contactme() {
       .then(
         (result) => {
           console.log("received");
-          navigate("/contact");
+          router.push("/contact");
           toast.success("Email sent successfully!");
         },
         (error) => {

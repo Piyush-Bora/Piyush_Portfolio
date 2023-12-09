@@ -1,5 +1,5 @@
 import React from "react";
-import mainImg from "../images/pbimg.png";
+// import mainImg from "../images/pbimg.png";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import Cards from "../components/Cards";
@@ -10,6 +10,8 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { Settings } from "../components/Settings";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import "../src/components/home.css";
 
 export default function Home({ Component, pageProps }) {
@@ -64,7 +66,16 @@ export default function Home({ Component, pageProps }) {
       {/* main img and intro text */}
       <div className="main-intro md:grid md:grid-cols-2 gap-x-5">
         <Fade>
-          <section className="flex flex-col justify-start md:justify-center md:items-start md:pl-24 lg:space-y-6 space-y-4 h-full md:my-5">
+          <section className="img-side flex justify-center md:justify-end md:mr-12 md:h-full h-fit  ">
+            <Image
+              src="/images/pbimg.png"
+              alt="Piyush Bora"
+              className="h-[35rem] object-contain"
+              width={100000}
+              height={100000}
+            />
+          </section>
+          <section className="flex flex-col justify-start md:justify-center md:items-start md:pl-6 lg:space-y-6 space-y-4 h-full md:my-5">
             <p className="text-[#0891B2] text-4xl text-center tracking-widest md:text-left md:text-5xl md:tracking-[.7rem] font-light spacing font-gilroy mt-2 md:mt-0">
               PIYUSH BORA
             </p>
@@ -89,13 +100,6 @@ export default function Home({ Component, pageProps }) {
                 </a>
               ))}
             </div>
-          </section>
-          <section className="img-side flex justify-center md:justify-end md:mr-12 md:h-full h-fit  ">
-            <Image
-              src={mainImg}
-              alt="Piyush Bora"
-              className="h-[35rem] object-contain"
-            />
           </section>
         </Fade>
       </div>
