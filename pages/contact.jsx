@@ -174,7 +174,7 @@ export default function Contactme() {
       />
     </div>
   ) : (
-    <div className="w-full flex flex-col justify-center items-center font-poppins">
+    <div className="w-full flex flex-col justify-center items-center font-poppins md:min-h-[calc(100vh-12.5rem)]">
       <ToastContainer
         position="top-right"
         autoClose={4000}
@@ -194,7 +194,7 @@ export default function Contactme() {
             ref={form}
             // onSubmit={sendEmail}
           >
-            <span className="text-center text-3xl text-white filter drop-shadow-2xl mb-4 mt-3">
+            <span className="text-center text-4xl text-white filter drop-shadow-2xl mb-4 mt-3 font-poppins font-semibold">
               Contact Me
             </span>
             {/* name */}

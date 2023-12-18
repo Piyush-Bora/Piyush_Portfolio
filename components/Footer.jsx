@@ -29,9 +29,9 @@ const Footer = () => {
   ];
 
   return (
-    <div className=" px-5 md:px-8">
+    <div className="px-5 md:px-8 h-20 mt-10">
       {/* <Fade direction={"up"} cascade={true}> */}
-      <footer className="relative min-w-full bottom-0 left-0 text-gray-400  mt-14 border-t-2 border-dashed border-gray-400">
+      <footer className="relative min-w-full bottom-0 left-0 text-gray-400 border-t-2 border-dashed border-gray-400">
         <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
           <p
             href="/"

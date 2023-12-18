@@ -12,14 +12,14 @@ import dynamic from "next/dynamic";
 
 function Experiences() {
   return (
-    <div className="flex flex-col justify-center items-center">
-      <span className="w-full text-center text-4xl md:text-5xl text-white my-20 drop-shadow-xl font-poppins">
+    <div className="flex flex-col justify-center items-center py-8 mt-10">
+      <span className="text-5xl md:text-6xl text-[#0891B2] font-poppins font-bold mb-3 filter drop-shadow-md">
         <Fade delay={100} duration={1000}>
           Experiences
         </Fade>
       </span>
 
-      <Fade delay={100} duration={1000}>
+      <Fade delay={100} duration={1000} className="mt-12">
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work drop-shadow-xl"

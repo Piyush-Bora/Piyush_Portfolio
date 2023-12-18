@@ -60,22 +60,21 @@ export default function Home({ Component, pageProps }) {
   }, []);
 
   console.log({ pageProps });
-
   return (
     <div className="min-w-screen flex-1">
       {/* main img and intro text */}
-      <div className="main-intro md:grid md:grid-cols-2 gap-x-5">
+      <div className="main-intro space-y-10 md:space-y-0 min-h-[calc(100vh-5rem)] md:grid md:grid-cols-2 md:gap-x-5">
         <Fade>
-          <section className="img-side flex justify-center md:justify-end md:mr-12 md:h-full h-fit  ">
+          <section className="img-side flex justify-center items-center md:justify-end md:mr-12 md:h-full h-fit  ">
             <Image
               src="/images/pbimg.png"
               alt="Piyush Bora"
-              className="h-[35rem] object-contain"
-              width={100000}
-              height={100000}
+              className="h-full w-full object-contain"
+              width={10000}
+              height={10000}
             />
           </section>
-          <section className="flex flex-col justify-start md:justify-center md:items-start md:pl-6 lg:space-y-6 space-y-4 h-full md:my-5">
+          <section className="flex flex-col justify-start md:justify-center md:items-start md:pl-[7rem] lg:space-y-6 space-y-4 h-full md:my-5">
             <p className="text-[#0891B2] text-4xl text-center tracking-widest md:text-left md:text-5xl md:tracking-[.7rem] font-light spacing font-gilroy mt-2 md:mt-0">
               PIYUSH BORA
             </p>
@@ -96,7 +95,6 @@ export default function Home({ Component, pageProps }) {
                   className="text-gray-400 hover:text-white cursor-pointer"
                 >
                   <span>{icon?.name}</span>
-                  {/* <ion-icon name={icon.name}></ion-icon> */}
                 </a>
               ))}
             </div>
@@ -105,7 +103,7 @@ export default function Home({ Component, pageProps }) {
       </div>
 
       {/* Projects  */}
-      <div className="min-w-full flex justify-center items-center py-8 mt-20">
+      <div className="min-w-full flex justify-center items-center pb-8 mt-4">
         <span className="text-center text-white text-4xl font-semibold tracking-wide">
           <Fade delay={100} duration={1000}>
             My Projects

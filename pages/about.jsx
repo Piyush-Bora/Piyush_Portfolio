@@ -4,7 +4,7 @@ import { Fade } from "react-awesome-reveal";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center min-w-full leading-loose text-center space-y-4 py-8 flex-1 px-4">
+    <div className="flex flex-col justify-center items-center min-w-full leading-loose text-center space-y-4 py-8 flex-1 px-4 mt-10">
       <span className="text-5xl md:text-6xl text-[#0891B2] font-poppins font-bold mb-3 filter drop-shadow-md">
         <Fade delay={100} duration={200}>
           About Me
@@ -34,7 +34,7 @@ export default function About() {
       </Fade>
 
       <Fade cascade damping={0.2} delay={300} duration={1200}>
-        <div className="flex flex-col w-[60rem] min-h-[35rem] mx-auto pt-12 font-poppins">
+        <div className="flex flex-col w-[60rem] min-h-[25rem] mx-auto pt-12 font-poppins">
           <div className="w-full bg-[#132d49] flex justify-between items-center rounded-t-lg py-4 px-3 md:px-5">
             <span className="text-white text-lg md:text-xl mr-2">
               Piyush Bora Resume
@@ -55,7 +55,7 @@ export default function About() {
             title="myResume"
             src="https://drive.google.com/file/d/1s5R0oiUZ8JLBHsLrHChoFfzJYed2SqCz/preview"
             // frameBorder="0"
-            className="md:min-h-[50rem]"
+            className="md:min-h-[40rem]"
           ></iframe>
         </div>
       </Fade>
