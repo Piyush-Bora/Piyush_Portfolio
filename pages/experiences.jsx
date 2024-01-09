@@ -8,7 +8,6 @@ import { FaShoppingBag, FaUserClock, FaLink } from "react-icons/fa";
 import Positions from "../components/Positions";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 function Experiences() {
   return (
