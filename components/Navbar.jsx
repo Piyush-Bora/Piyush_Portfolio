@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 // import PropTypes from 'prop-types'
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [navOpen, setNav] = useState(false);
 
   const toggleNavBar = () => {

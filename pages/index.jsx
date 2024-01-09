@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import "../src/components/home.css";
 
-export default function Home({ Component, pageProps }) {
+export default function Home({ pageProps }) {
   const socialMediaLinks = [
     {
       id: 1,
@@ -147,7 +147,10 @@ export default function Home({ Component, pageProps }) {
         <div className="box-border min-w-full flex flex-wrap justify-center items-center px-1 md:px-30">
           {Skills?.filter((item) => item.category === "Language").map(
             (item) => (
-              <div className="w-[8rem] md:w-[9rem] wrapper flex flex-col bg-white rounded-xl md:mx-4 mx-2 my-2 p-3 justify-center items-center hover:scale-105 duration-150">
+              <div
+                key={item.id}
+                className="w-[8rem] md:w-[9rem] wrapper flex flex-col bg-white rounded-xl md:mx-4 mx-2 my-2 p-3 justify-center items-center hover:scale-105 duration-150"
+              >
                 <img
                   src={
                     item.img
@@ -177,7 +180,10 @@ export default function Home({ Component, pageProps }) {
       <Fade delay={200} duration={1000}>
         <div className="box-border min-w-full flex flex-wrap justify-center items-center px-1 md:px-30">
           {Skills?.filter((item) => item.category === "Tools").map((item) => (
-            <div className="w-[8rem] md:w-[9rem] wrapper flex flex-col bg-white rounded-xl md:mx-4 mx-2 my-2 p-3 justify-center items-center hover:scale-105 duration-150">
+            <div
+              key={item.id}
+              className="w-[8rem] md:w-[9rem] wrapper flex flex-col bg-white rounded-xl md:mx-4 mx-2 my-2 p-3 justify-center items-center hover:scale-105 duration-150"
+            >
               <img
                 src={
                   item.img

@@ -37,7 +37,7 @@ export default function Contact() {
           toast.success("Message sent successfully");
         }
       })
-      .catch((err) => {
+      .catch(() => {
         toast.error("Something went wrong");
       });
   };
@@ -126,7 +126,7 @@ export default function Contact() {
       <Fade up cascade>
         <div className="w-5/6 mx-auto">
           <div>
-            <h1 className="heading-main">Let's Talk</h1>
+          <h1 className="heading-main">Let&apos;s Talk</h1>
           </div>
           <h1 className="text-center mt-4 font-secondary font-medium text-lg text-gray-400">
             While I am good with smoke signals, there are simpler ways to get in

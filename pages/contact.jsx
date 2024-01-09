@@ -56,13 +56,13 @@ export default function Contactme() {
         "6CO0sworPceiYB500"
       )
       .then(
-        (result) => {
-          console.log("received");
+        (res) => {
+          console.log(res?.message);
           router.push("/contact");
           toast.success("Email sent successfully!");
         },
         (error) => {
-          console.log(error.text);
+          console.log(error?.text);
           toast.error("Sorry, Something went wrong!");
         }
       );

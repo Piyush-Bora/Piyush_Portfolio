@@ -12,9 +12,9 @@ export default function About() {
       </span>
       <Fade cascade damping={0.2} delay={150} duration={1200}>
         <p className="text-white text-lg md:text-xl w-[20rem] md:w-[60rem]">
-          I'm Piyush, currently I living in Pune and pursuing my Undergraduate
+          I&apos;m Piyush, currently I living in Pune and pursuing my Undergraduate
           Degree from Pune Institute of Computer Technology in the Information
-          Technology Course. I'm currently working in the field of Web
+          Technology Course. I&apos;m currently working in the field of Web
           Development.
         </p>
         <p className="text-white text-lg md:text-xl w-[20rem] md:w-[60rem]">
@@ -28,7 +28,7 @@ export default function About() {
         </p>
         <p className="text-white text-lg md:text-xl w-[20rem] md:w-[60rem]">
           In my spare time I like to hit the Gym, Listen to music, and play
-          Badminton. I’m always down for hearing about new projects, so please
+          Badminton. I&apos;m always down for hearing about new projects, so please
           feel free to drop me a line.
         </p>
       </Fade>

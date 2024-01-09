@@ -14,7 +14,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { particlesOptions } from "./components/particlesConfig";
 
-function App(props) {
+function App() {
   const [loading, setLoading] = useState(false);
 
   const particlesInit = (engine) => {
