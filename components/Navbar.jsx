@@ -52,9 +52,9 @@ export default function Navbar(props) {
           {/* :className="{'translate-x-full': !navOpen, 'translate-x-0': navOpen}" */}
           {/* <div className="backdrop-blur-xl"> */}
           <ul
-            className={`fixed left-0 right-0 min-h-screen bg-[#1f203b] space-y-2 p-5 mt-3 font-gilroy text-lg z-50 transform translate-x-full ${
-              navOpen === false ? "translate-x-full" : "translate-x-0"
-            } duration-300 md:relative md:flex md:min-h-0 md:space-y-0 md:p-0 md:bg-opacity-0 md:opacity-100 md:mt-0 md:space-x-4 md:translate-x-0 md:mr-2 md:items-center`}
+            className={`fixed left-0 right-0 min-h-screen bg-[#1f203b] space-y-2 p-5 mt-3 font-gilroy text-lg z-50 transform transition-all duration-300 ${
+              navOpen === false ? "hidden" : ""
+            } md:relative md:flex md:min-h-0 md:space-y-0 md:p-0 md:bg-opacity-0 md:opacity-100 md:mt-0 md:space-x-4 md:translate-x-0 md:mr-2 md:items-center`}
           >
             <li className="hover:bg-[#29648a] rounded-2xl px-3 py-1 my-1 text-center focus:outline-none focus:bg-[#29648a]">
               <Link href="/" onClick={toggleNavBar}>

@@ -34,7 +34,7 @@ export default function About() {
       </Fade>
 
       <Fade cascade damping={0.2} delay={300} duration={1200}>
-        <div className="flex flex-col w-[60rem] min-h-[25rem] mx-auto pt-12 font-poppins">
+        <div className="flex flex-col w-[100%] md:w-[60rem] mx-auto pt-12 font-poppins">
           <div className="w-full bg-[#132d49] flex justify-between items-center rounded-t-lg py-4 px-3 md:px-5">
             <span className="text-white text-lg md:text-xl mr-2">
               Piyush Bora Resume
@@ -55,7 +55,7 @@ export default function About() {
             title="myResume"
             src="https://drive.google.com/file/d/1s5R0oiUZ8JLBHsLrHChoFfzJYed2SqCz/preview"
             // frameBorder="0"
-            className="md:min-h-[40rem]"
+            className="md:min-h-[40rem] min-h-[20rem]"
           ></iframe>
         </div>
       </Fade>
