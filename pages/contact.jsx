@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Fade } from "react-awesome-reveal";
 import { toast, ToastContainer } from "react-toastify";
 import { useRouter } from "next/router";
 import "react-toastify/dist/ReactToastify.css";
@@ -13,7 +12,7 @@ export default function Contactme() {
   // const [visible, setVisible] = useState(false);
   const phoneRegex = RegExp(/^(\+\d{1,3}[- ]?)?\d{10}$/);
   const emailRegex = RegExp(
-    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
   );
   const router = useRouter();
 
@@ -53,7 +52,7 @@ export default function Contactme() {
         "service_v4hd6t8",
         "template_h19fn2f",
         form.current,
-        "6CO0sworPceiYB500"
+        "6CO0sworPceiYB500",
       )
       .then(
         (res) => {
@@ -64,7 +63,7 @@ export default function Contactme() {
         (error) => {
           console.log(error?.text);
           toast.error("Sorry, Something went wrong!");
-        }
+        },
       );
 
     // await axios
@@ -187,133 +186,131 @@ export default function Contactme() {
         pauseOnHover
         theme="dark"
       />
-      <Fade duration={1000}>
-        <div className="contact w-[22rem] md:w-[50rem] bg-[#103c55] px-6 py-5 rounded-2xl mt-8">
-          <form
-            className="flex flex-col space-y-4"
-            ref={form}
-            // onSubmit={sendEmail}
-          >
-            <span className="text-center text-4xl text-white filter drop-shadow-2xl mb-4 mt-3 font-poppins font-semibold">
-              Contact Me
-            </span>
-            {/* name */}
-            <div className="name md:flex md:justify-between items-center space-y-3 md:space-y-0">
-              <div className="fname w-full px-4 flex flex-col md:space-y-2">
-                <label htmlFor="fname" className=" text-white">
-                  First name: <span className="text-red-500">*</span>
-                </label>
-                <input
-                  required
-                  type="text"
-                  id="fname"
-                  name="user_name"
-                  placeholder="John"
-                  className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
-                  onChange={handleChange}
-                />
-                {errors.nameError === "" ? null : (
-                  <p className="text-red-500 text-xs italic mt-2">
-                    {errors.nameError}
-                  </p>
-                )}
-              </div>
-              <div className="lname w-full px-4 flex flex-col  md:space-y-2">
-                <label htmlFor="lname" className=" text-white">
-                  Last name: <span className="text-red-500">*</span>
-                </label>
-                <input
-                  required
-                  type="text"
-                  id="lname"
-                  name="lname"
-                  placeholder="Doe"
-                  className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
-                />
-              </div>
+      <div className="contact w-[22rem] md:w-[50rem] bg-[#103c55] px-6 py-5 rounded-2xl mt-8">
+        <form
+          className="flex flex-col space-y-4"
+          ref={form}
+          // onSubmit={sendEmail}
+        >
+          <span className="text-center text-4xl text-white filter drop-shadow-2xl mb-4 mt-3 font-poppins font-semibold">
+            Contact Me
+          </span>
+          {/* name */}
+          <div className="name md:flex md:justify-between items-center space-y-3 md:space-y-0">
+            <div className="fname w-full px-4 flex flex-col md:space-y-2">
+              <label htmlFor="fname" className=" text-white">
+                First name: <span className="text-red-500">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                id="fname"
+                name="user_name"
+                placeholder="John"
+                className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
+                onChange={handleChange}
+              />
+              {errors.nameError === "" ? null : (
+                <p className="text-red-500 text-xs italic mt-2">
+                  {errors.nameError}
+                </p>
+              )}
             </div>
-            {/* name end */}
+            <div className="lname w-full px-4 flex flex-col  md:space-y-2">
+              <label htmlFor="lname" className=" text-white">
+                Last name: <span className="text-red-500">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Doe"
+                className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
+              />
+            </div>
+          </div>
+          {/* name end */}
 
-            {/* Email n Phone */}
-            <div className="name md:flex md:justify-between items-center space-y-3 md:space-y-0">
-              <div className="email w-full px-4 flex flex-col  md:space-y-2">
-                <label htmlFor="email" className=" text-white">
-                  Email Id: <span className="text-red-500">*</span>
-                </label>
-                <input
-                  required
-                  type="text"
-                  id="emailId"
-                  name="user_email"
-                  placeholder="example@email.com"
-                  onChange={handleChange}
-                  className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
-                />
-                {errors.emailError === "" ? null : (
-                  <p className="text-red-500 text-xs italic mt-2">
-                    {errors.emailError}
-                  </p>
-                )}
-              </div>
-              <div className="phone w-full px-4 flex flex-col  md:space-y-2">
-                <label htmlFor="phone" className=" text-white">
-                  Mobile Number:
-                </label>
-                <input
-                  required
-                  type="phone"
-                  id="phone"
-                  name="user_phone"
-                  placeholder="9999999999"
-                  onChange={handleChange}
-                  className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
-                />
-                {errors.phoneError === "" ? null : (
-                  <p className="text-red-500 text-xs italic mt-2">
-                    {errors.phoneError}
-                  </p>
-                )}
-              </div>
+          {/* Email n Phone */}
+          <div className="name md:flex md:justify-between items-center space-y-3 md:space-y-0">
+            <div className="email w-full px-4 flex flex-col  md:space-y-2">
+              <label htmlFor="email" className=" text-white">
+                Email Id: <span className="text-red-500">*</span>
+              </label>
+              <input
+                required
+                type="text"
+                id="emailId"
+                name="user_email"
+                placeholder="example@email.com"
+                onChange={handleChange}
+                className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
+              />
+              {errors.emailError === "" ? null : (
+                <p className="text-red-500 text-xs italic mt-2">
+                  {errors.emailError}
+                </p>
+              )}
             </div>
-            {/* Email n Phone end */}
+            <div className="phone w-full px-4 flex flex-col  md:space-y-2">
+              <label htmlFor="phone" className=" text-white">
+                Mobile Number:
+              </label>
+              <input
+                required
+                type="phone"
+                id="phone"
+                name="user_phone"
+                placeholder="9999999999"
+                onChange={handleChange}
+                className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 py-2"
+              />
+              {errors.phoneError === "" ? null : (
+                <p className="text-red-500 text-xs italic mt-2">
+                  {errors.phoneError}
+                </p>
+              )}
+            </div>
+          </div>
+          {/* Email n Phone end */}
 
-            {/* messge  */}
-            <div className="message md:flex md:justify-between items-center space-y-3 md:space-y-0 ms: mt-2">
-              <div className="message w-full px-4 flex flex-col md:space-y-2">
-                <label htmlFor="message" className=" text-white">
-                  Message: <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  required
-                  type="text"
-                  id="message_for_me"
-                  name="message"
-                  placeholder="Enter your message here"
-                  onChange={handleChange}
-                  className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 h-36 resize-none py-2"
-                />
-                {errors.messageError === "" ? null : (
-                  <p className="text-red-500 text-xs italic mt-2">
-                    {errors.messageError}
-                  </p>
-                )}
-              </div>
+          {/* messge  */}
+          <div className="message md:flex md:justify-between items-center space-y-3 md:space-y-0 ms: mt-2">
+            <div className="message w-full px-4 flex flex-col md:space-y-2">
+              <label htmlFor="message" className=" text-white">
+                Message: <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                required
+                type="text"
+                id="message_for_me"
+                name="message"
+                placeholder="Enter your message here"
+                onChange={handleChange}
+                className="rounded-lg px-2 focus:outline-none focus:ring-4 focus:ring-[#6f9edc]/50 h-36 resize-none py-2"
+              />
+              {errors.messageError === "" ? null : (
+                <p className="text-red-500 text-xs italic mt-2">
+                  {errors.messageError}
+                </p>
+              )}
             </div>
+          </div>
 
-            <div className="submit w-full flex justify-center items-center px-4">
-              <button
-                id="subbtn"
-                type="submit"
-                // value="Send"
-                className="bg-[#69c1f4] px-10 py-2 focus:outline-none hover:bg-[#096da6] rounded-lg text-2xl font-semibold drop-shadow-lg disabled:opacity-75"
-                onClick={(e) => handleSubmit(e)}
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </Fade>
+          <div className="submit w-full flex justify-center items-center px-4">
+            <button
+              id="subbtn"
+              type="submit"
+              // value="Send"
+              className="bg-[#69c1f4] px-10 py-2 focus:outline-none hover:bg-[#096da6] rounded-lg text-2xl font-semibold drop-shadow-lg disabled:opacity-75"
+              onClick={(e) => handleSubmit(e)}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
