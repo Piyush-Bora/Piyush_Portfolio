@@ -2,7 +2,6 @@ import React from "react";
 // import logo from "../images/pLogo.png";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Image from "next/image";
-// import {Fade} from "react-awesome-reveal";
 
 const Footer = () => {
   const socialMedia = [
@@ -30,7 +29,6 @@ const Footer = () => {
 
   return (
     <div className="px-5 md:px-8 h-20 mt-10">
-      {/* <Fade direction={"up"} cascade={true}> */}
       <footer className="relative min-w-full bottom-0 left-0 text-gray-400 border-t-2 border-dashed border-gray-400">
         <div className="container px-5 py-4 mx-auto flex items-center sm:flex-row flex-col">
           <p
@@ -64,7 +62,6 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      {/* </Fade> */}
     </div>
   );
 };
