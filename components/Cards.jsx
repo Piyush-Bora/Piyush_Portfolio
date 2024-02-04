@@ -3,7 +3,7 @@ import { FaGithub, FaGlobe } from "react-icons/fa";
 
 export default function Cards(pageProps) {
   return (
-    <div className="cards max-w-[25rem] m-3 min-h-[25rem] h-full rounded-lg flex flex-col hover:scale-105 transform duration-200 shadow-xl lg:m-0 lg:mx-3 lg:my-3 lg:w-[28rem]">
+    <div className="cards max-w-[25rem] m-auto min-h-[25rem] h-full rounded-lg flex flex-col hover:scale-105 transform duration-200 shadow-xl lg:w-[28rem]">
       <div className="img focus:outline-none">
         <img
           src={

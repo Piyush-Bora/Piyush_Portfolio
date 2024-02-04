@@ -18,7 +18,7 @@ export default function About() {
         Web-Development, UI and UX designing and a good sense of a clean and
         user friendly interface.
       </p>
-      <p clasName="text-white text-lg md:text-xl w-[20rem] md:w-[60rem]">
+      <p className="text-white text-lg md:text-xl w-[20rem] md:w-[60rem]">
         Skilled at writing well-designed, testable and efficient code using
         current best practices.
       </p>
