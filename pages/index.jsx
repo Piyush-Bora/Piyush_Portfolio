@@ -57,7 +57,6 @@ export default function Home({ pageProps }) {
     };
   }, []);
 
-  console.log({ pageProps });
   return (
     <div className="min-w-screen flex-1">
       {/* main img and intro text */}

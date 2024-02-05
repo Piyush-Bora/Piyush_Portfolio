@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsFillCloudDownloadFill } from "react-icons/bs";
+import { animate, stagger } from "framer-motion/dom";
 
 export default function About() {
+  useEffect(() => {
+    animate("p", { opacity: 1 }, { delay: stagger(0.1) });
+  }, []);
   return (
     <div className="flex flex-col justify-center items-center min-w-full leading-loose text-center space-y-4 py-8 flex-1 px-4 mt-10">
       <span className="text-5xl md:text-6xl text-[#0891B2] font-poppins font-bold mb-3 filter drop-shadow-md">

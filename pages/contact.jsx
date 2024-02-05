@@ -170,6 +170,7 @@ export default function Contactme() {
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
+        className="min-h-[calc(100vh-12.5rem)] w-full"
       />
     </div>
   ) : (
