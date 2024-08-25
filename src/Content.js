@@ -59,17 +59,17 @@ export const content = {
   ],
   hero: {
     title: "Web Developer",
-    firstName: "JOHN",
-    LastName: "ALEX",
+    firstName: "PIYUSH",
+    LastName: "BORA",
     btnText: "Hire Me",
     image: Hero_person,
     hero_content: [
       {
-        count: "8+",
-        text: "Years of Experinse in Web development",
+        count: "1+",
+        text: "Years of Experience in Web development",
       },
       {
-        count: "20+",
+        count: "10+",
         text: "Projects Worked in my career",
       },
     ],
@@ -125,11 +125,11 @@ export const content = {
         para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
         logo: services_logo2,
       },
-      {
-        title: "PhotoShop Editing",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
-      },
+      // {
+      //   title: "PhotoShop Editing",
+      //   para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+      //   logo: services_logo3,
+      // },
     ],
   },
   Projects: {
