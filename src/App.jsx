@@ -11,6 +11,7 @@ import { useEffect } from "react";
 // Animation package
 import Aos from "aos";
 import "aos/dist/aos.css";
+import WorkHistory from "./components/WorkHistory";
 
 const App = () => {
   useEffect(() => {
@@ -21,17 +22,18 @@ const App = () => {
     });
   }, []);
   return (
-    <div className="">
+    <div className=''>
       <Navbar />
       <Hero />
       <Skills />
       <Service />
       <Projects />
+      <WorkHistory />
       <Testimonials />
       <Hireme />
       <Contact />
-      <footer className="p-3 text-center">
-        <h6 className="mb-3">JOHN ALEX</h6>
+      <footer className='p-3 text-center'>
+        <h6 className='mb-3'>JOHN ALEX</h6>
         <p>codeaprogram © All CopyRights Reserved 2022</p>
       </footer>
     </div>
